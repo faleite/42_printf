@@ -1,30 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 20:18:44 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/09 18:21:08 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/05/10 21:42:22 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <unistd.h>
-# include <stdarg.h>
 # include <stdio.h>
+# include <stdarg.h>
 
 /**
  * @brief The printf utility formats and prints its arguments, after the first, 
- * under control of the	format.	The format is a character string which contains
+ * under control of the format. The format is a character string which contains
  * three types of objects: plain characters, which are simply copied to	standard
  * output, character escape sequences which are converted and copied to the 
  * standard output, and	format specifications, each of which causes printing of	
  * the next successive argument.
  * */
-int	ft_printf(const char *fmt, ...);
+int	ft_printf(const char *param, ...);
 
-#endif /* LIBFTPRINTF_H */
+/**
+ * @brief Outputs the character ’c’ to the given file descriptor.
+ * @param c The character to output.
+ * @return The length of character.
+*/
+int	ft_putchar(char c);
+
+/**
+ * @brief Outputs the string ’s’ to the given file descriptor.
+ * @param s The string to output.
+ * @return The length of string.
+*/
+int	ft_putstr(char *s);
+
+/**
+ * @brief Outputs the integer ’n’ to the given file descriptor.
+ * @param n The integer to output.
+ * @return The length of number.
+*/
+int	ft_putnbr(int n);
+
+int	ft_uint(unsigned int n);
+
+int	ft_adress(unsigned long int n);
+
+int	ft_hexa(unsigned int n);
+
+#endif /* FT_PRINTF_H */
