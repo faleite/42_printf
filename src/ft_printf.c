@@ -6,14 +6,14 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:57:41 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/10 20:01:51 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/05/11 21:59:52 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h" 
 
-# include <stdio.h>
-# include <stdarg.h>
+/* # include <stdio.h> */
+/* # include <stdarg.h> */
 
 static int	fmt_type(char type, va_list argptr)
 {
@@ -29,9 +29,9 @@ static int	fmt_type(char type, va_list argptr)
 	else if (type == 'd' || type == 'i')
 		c += ft_putnbr(va_arg(argptr, int));
 	else if (type == 'u')
-		c += ft_uint(va_arg(argptr, unsigned int));
+		c += ft_unsint(va_arg(argptr, unsigned int));
 	else if (type == 'p')
-		c += ft_adrees(va_arg(argptr, unsigned long int));
+		c += ft_adress(va_arg(argptr, unsigned long int));
 	else if (type == 'x')
 		c += ft_hexa(va_arg(argptr, unsigned int));
 	else if (type == 'X')
@@ -52,7 +52,7 @@ int	ft_printf(const char *param, ...)
 	{
 		if (param[i] == '%')
 		{
-			c += fmt_type(param[++i], argptr);		
+			c += fmt_type(param[++i], argptr);
 		}
 		else
 			c += ft_putchar(param[i]);
@@ -62,8 +62,8 @@ int	ft_printf(const char *param, ...)
 	return (c);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	printf("String");
 	return(0);
-}
+} */

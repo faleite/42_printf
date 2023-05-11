@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 20:18:44 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/10 21:42:22 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/05/11 21:44:08 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,12 @@ int	ft_putstr(char *s);
 */
 int	ft_putnbr(int n);
 
-int	ft_uint(unsigned int n);
+/**
+ * @brief Outputs the unsigned integer ’n’ to the given file descriptor.
+ * @param n The unsigned integer to output.
+ * @return The length of number.
+*/
+int	ft_unsint(unsigned int n);
 
 int	ft_adress(unsigned long int n);
 
