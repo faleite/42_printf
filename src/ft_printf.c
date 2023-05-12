@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:57:41 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/11 21:59:52 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/05/12 22:16:24 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ static int	fmt_type(char type, va_list argptr)
 		c += ft_putnbr(va_arg(argptr, int));
 	else if (type == 'u')
 		c += ft_unsint(va_arg(argptr, unsigned int));
-	else if (type == 'p')
-		c += ft_adress(va_arg(argptr, unsigned long int));
-	else if (type == 'x')
-		c += ft_hexa(va_arg(argptr, unsigned int));
-	else if (type == 'X')
-		c += ft_hexa(va_arg(argptr, unsigned int));
+	/* else if (type == 'p') */
+		/* c += ft_adress(va_arg(argptr, unsigned long int)); */
+	/* else if (type == 'x') */
+		/* c += ft_hexa(va_arg(argptr, unsigned int)); */
+	/* else if (type == 'X') */
+		/* c += ft_hexa(va_arg(argptr, unsigned int)); */
 	return (c);
 }
 
@@ -62,8 +62,13 @@ int	ft_printf(const char *param, ...)
 	return (c);
 }
 
-/* int	main(void)
-{
-	printf("String");
+/* int	main(void) 
+{	
+	ft_printf("String\n");
+	ft_printf("Char: %c\n", 'C');
+	ft_printf("String: %s\n", "Teste");
+	ft_printf("Number: %d\n", -2147483647);
+	ft_printf("Number Unsigned: %u\n", 4294967295);
 	return(0);
-} */
+}
+*/

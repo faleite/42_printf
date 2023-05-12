@@ -6,15 +6,15 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 20:18:44 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/11 21:44:08 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/05/12 21:55:43 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <unistd.h>
 # include <stdio.h>
+# include <unistd.h>
 # include <stdarg.h>
 
 /**

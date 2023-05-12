@@ -2,5 +2,24 @@
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-FILES = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr ft_unsint.c
-OBJS = $(FILES:.c=.o) # generates the same FILES list whith the .o extension
+FILES = ft_printf.c ft_putchar.c ft_putstr.c ft_putnbr.c ft_unsint.c
+OBJS = $(FILES:.c=.o) # Create the same in FILES list with the .o extension
+
+### Script ###
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	ar -rcs $@ $(OBJS)
+
+$(OBJS): $(FILES)
+	$(CC) $(CFLAGS) -c $(FILES)
+
+clean:
+	rm -f $(OBJS)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re 
