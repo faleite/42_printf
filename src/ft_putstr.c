@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 20:59:28 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/11 21:54:15 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:16:33 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_putstr(char *s)
 	int	len;
 
 	len = 0;
+	if (!s)
+		return (ft_putstr("(null)"));
 	while (s[len])
 		write(1, &s[len++], 1);
 	return (len);

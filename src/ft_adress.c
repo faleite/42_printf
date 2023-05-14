@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_adress.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 17:18:55 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/14 16:46:55 by faaraujo         ###   ########.fr       */
+/*   Created: 2023/05/14 14:05:41 by faaraujo          #+#    #+#             */
+/*   Updated: 2023/05/14 14:46:59 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h" 
 
-int	ft_putnbr(int n)
+int	ft_adress(unsigned long n)
 {
-	unsigned int	nb;
-	int				len;
+	int	len;
 
 	len = 0;
-	nb = n;
-	if (n < 0)
-	{
-		len += write(1, "-", 1);
-		nb *= -1;
-	}
-	if (nb < 10)
-	{
-		len += write(1, &"0123456789"[nb], 1);
-	}
+	if (n == 0)
+		len += write(1, "(nil)", 5);
 	else
 	{
-		len += ft_putnbr((nb / 10));
-		len += ft_putnbr((nb % 10));
+		len += write(1, "0x", 2);
+		len += ft_hexa(n, HEXALOW);
 	}
 	return (len);
 }

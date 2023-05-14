@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 20:18:44 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/12 21:55:43 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/05/14 16:29:18 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
+
+# define HEXALOW "0123456789abcdef"
+# define HEXAHIG "0123456789ABCDEF"
 
 /**
  * @brief The printf utility formats and prints its arguments, after the first, 
@@ -55,8 +58,19 @@ int	ft_putnbr(int n);
 */
 int	ft_unsint(unsigned int n);
 
-int	ft_adress(unsigned long int n);
+/**
+ * @brief Outputs the hexadecimal number to given file descriptor
+ * @param n The unsigned long int to output
+ * @return The length of number.
+ * */
+int	ft_adress(unsigned long n);
 
-int	ft_hexa(unsigned int n);
+/**
+ * @brief Output a number in hexadecimal lowercase and uppercase format.
+ * @param n number to convert
+ * @param type_case a sequence list of base 16 number 
+ * @return The length of number.
+ * */
+int	ft_hexa(unsigned long n, char *type_case);
 
 #endif /* FT_PRINTF_H */
