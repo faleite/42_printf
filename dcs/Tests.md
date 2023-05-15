@@ -93,7 +93,8 @@ int	main(void)
 	/* ft_printf("Adress printf: %p\n%n", ptr, &nb); */
 	/* printf("len printf: %d\n", n); */
 	/* ft_printf("len ft_printf: %d\n", n); */
-	ft_printf("String: %s\nChar: %c\nNumber: %d\n", "Hello", 'H', -2147483647);
+	/* ft_printf("String: %s\nChar: %c\nNumber: %d\n", "Hello", 'H', -2147483647); */
+	ft_printf("%");
 	return(0);
 }
 ```

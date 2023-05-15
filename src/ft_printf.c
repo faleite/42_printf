@@ -6,7 +6,7 @@
 /*   By: faaraujo <faaraujo@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:57:41 by faaraujo          #+#    #+#             */
-/*   Updated: 2023/05/14 16:55:12 by faaraujo         ###   ########.fr       */
+/*   Updated: 2023/05/15 20:21:47 by faaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	ft_printf(const char *param, ...)
 	va_start(argptr, param);
 	while (param[i])
 	{
-		if (param[i] == '%')
+		if (param[i] == '%' && param[i + 1])
 		{
 			c += fmt_type(param[++i], argptr);
 		}

@@ -41,5 +41,4 @@ int ft_printf(const char *, ...);
 Info | Comando
 ----|--------
 *Limites de variaveis*| **man limits.h**
-
-
+Para verificar se ha Segmentation Fault | **cc \*.c main.c -fsanitize=address -g** 
