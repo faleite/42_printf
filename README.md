@@ -15,5 +15,5 @@ Where do I implement *variadic functions*.
 :------:|:-----:|
 [Algorithms & AI] [Rigor] | **:white_check_mark: 100%**
 
-### *Access to the [interactive map](https://faleite.github.io/printf).*
-[<img align="center" src="./dcs/map.png" width="100%"/>](https://faleite.github.io/printf)
+### *Access to the [interactive map](https://faleite.github.io/42printf).*
+[<img align="center" src="./dcs/map.png" width="100%"/>](https://faleite.github.io/42printf)
